@@ -1,8 +1,8 @@
 import React from 'react';
 import {
   View, Text, StyleSheet, ScrollView, TouchableOpacity,
-  SafeAreaView, StatusBar,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { colors, spacing, radius, typography, shadows } from '../../constants/theme';
@@ -41,7 +41,6 @@ export default function OutcomeScreen() {
   if (!beforeState || !afterState) {
     return (
       <SafeAreaView style={S.safe}>
-        <StatusBar barStyle="dark-content" />
         <View style={S.emptyState}>
           <View style={S.emptyIcon}>
             <Ionicons name="checkmark-circle-outline" size={28} color={colors.textMuted} />
@@ -66,7 +65,6 @@ export default function OutcomeScreen() {
 
   return (
     <SafeAreaView style={S.safe}>
-      <StatusBar barStyle="dark-content" />
       <ScrollView style={S.scroll} showsVerticalScrollIndicator={false}>
 
         {/* ── Header ── */}
