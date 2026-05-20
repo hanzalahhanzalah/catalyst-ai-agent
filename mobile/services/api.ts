@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-// ⚠️ CONFIGURE THIS: Change to your backend machine's local IP address
-// Run `ipconfig` (Windows) or `ifconfig` (Mac/Linux) to find your IP
-// Must be on the same WiFi network as your phone
-const BASE_URL = 'http://192.168.0.116:8000'; // <-- change this
+// 🚀 PRODUCTION: Railway backend — live & accessible from anywhere
+const BASE_URL = 'https://catalyst-ai-agent-production.up.railway.app';
 
 export const api = axios.create({
   baseURL: BASE_URL,
