@@ -581,8 +581,9 @@ const S = StyleSheet.create({
   // Sticky Analyze footer
   stickyFooter: {
     paddingHorizontal: spacing.md,
-    paddingVertical: spacing.sm,
+    paddingTop: spacing.sm,
     paddingBottom: spacing.md,
+    marginBottom: 8,
     backgroundColor: colors.background,
     borderTopWidth: 1,
     borderTopColor: colors.border,
