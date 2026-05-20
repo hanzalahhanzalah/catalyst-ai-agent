@@ -626,7 +626,7 @@ const S = StyleSheet.create({
   textarea: {
     backgroundColor: colors.background, borderRadius: radius.md,
     paddingHorizontal: 12, paddingVertical: 11,
-    minHeight: 145, ...typography.body, color: colors.text,
+    minHeight: 100, ...typography.body, color: colors.text,
     borderWidth: 1, borderColor: colors.border, lineHeight: 22,
   },
   // Light green add button
