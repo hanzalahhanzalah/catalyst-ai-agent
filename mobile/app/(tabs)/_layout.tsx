@@ -6,13 +6,21 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const TAB_ICON_SIZE = 22;
 
+// Minimum guaranteed clearance above Android system nav buttons (px)
+// This covers both 3-button nav (~48px) and gesture nav (~24px) fallback
+const ANDROID_MIN_BOTTOM = 24;
+
 export default function TabLayout() {
   const insets = useSafeAreaInsets();
 
-  // On Android, insets.bottom gives the exact height of the nav bar.
-  // We add it so the tab bar always sits ABOVE the system buttons.
-  const tabBarHeight = Platform.OS === 'ios' ? 80 : 56 + insets.bottom;
-  const tabBarPaddingBottom = Platform.OS === 'ios' ? 24 : insets.bottom + 4;
+  // Use whichever is larger: actual system inset OR our minimum guarantee.
+  // This prevents overlap on devices where insets.bottom incorrectly returns 0.
+  const safeBottom = Platform.OS === 'android'
+    ? Math.max(insets.bottom, ANDROID_MIN_BOTTOM)
+    : insets.bottom;
+
+  const tabBarHeight = Platform.OS === 'ios' ? 80 : 56 + safeBottom;
+  const tabBarPaddingBottom = Platform.OS === 'ios' ? 24 : safeBottom + 4;
 
   return (
     <Tabs
@@ -24,7 +32,9 @@ export default function TabLayout() {
           borderTopWidth: 0.5,
           height: tabBarHeight,
           paddingBottom: tabBarPaddingBottom,
-          paddingTop: 10,
+          paddingTop: 8,
+          // Elevate above system nav on Android — critical for edge-to-edge
+          elevation: 8,
         },
         tabBarActiveTintColor: colors.brand,
         tabBarInactiveTintColor: colors.tabInactive,

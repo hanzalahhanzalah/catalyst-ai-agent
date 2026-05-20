@@ -20,7 +20,12 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#1E3A5F"
       },
-      "package": "com.catalystai.agent"
+      "package": "com.catalystai.agent",
+      "softwareKeyboardLayoutMode": "resize",
+      "navigationBar": {
+        "barStyle": "dark-content",
+        "backgroundColor": "#F0F4F8"
+      }
     },
     "plugins": [
       "expo-router",
