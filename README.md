@@ -3,6 +3,15 @@
 
 > **An AI agent that reads multi-source content, extracts insights, resolves contradictions, validates constraints, executes a 5-step action chain, and recovers from failures — all powered by Google Antigravity (Gemini 2.0 Flash).**
 
+## 🔗 Submission Links
+
+| Item | Link |
+|---|---|
+| 📱 **Mobile App (APK)** | [Download APK](https://expo.dev/artifacts/eas/eHoy5LJBKy3ktLSWXeAy2D.apk) |
+| 💻 **GitHub Repository** | [github.com/hanzalahhanzalah/catalyst-ai-agent](https://github.com/hanzalahhanzalah/catalyst-ai-agent) |
+| 🌐 **Live Backend API** | [catalyst-ai-agent-production.up.railway.app](https://catalyst-ai-agent-production.up.railway.app) |
+| 📖 **API Docs** | [/docs](https://catalyst-ai-agent-production.up.railway.app/docs) |
+
 ---
 
 ## 🎥 Demo
