@@ -3,6 +3,7 @@
     "name": "Catalyst AI",
     "slug": "catalyst-ai-agent",
     "version": "1.0.0",
+    "sdkVersion": "51.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -28,6 +29,13 @@
     "scheme": "aiseekho",
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "e69caf59-af1b-4faa-aada-987c423db29b"
+      }
+    },
+    "owner": "hanzalah026"
   }
 }
